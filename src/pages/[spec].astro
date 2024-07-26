@@ -7,7 +7,6 @@ import PageLayout from '@/layouts/PageLayout.astro'
 import Highlight from '@/components/Highlight.astro'
 import SectionBlock from '@/components/SectionBlock.astro'
 import MarkdownWrapper from '@/components/MarkdownWrapper.astro'
-import FriendList from '@/components/FriendList.astro'
 import ProjectList from '@/components/ProjectList.astro'
 import { ReadingProgress } from '@/components/post/ReadingProgress'
 import { PostToc } from '@/components/post/PostToc'
@@ -32,7 +31,7 @@ const { md } = Astro.props
 
 const { headings, Content } = await md.render()
 
-const isPageLayout = ['friends', 'projects'].includes(md.slug)
+const isPageLayout = ['projects'].includes(md.slug)
 const isMdContentEmpty = md.body.trim().length === 0
 ---
 
@@ -46,7 +45,6 @@ const isMdContentEmpty = md.body.trim().length === 0
           </h1>
           <p>{md.data.description}</p>
         </header>
-        {md.slug === 'friends' && <FriendList />}
         {md.slug === 'projects' && <ProjectList />}
         {!isMdContentEmpty && (
           <MarkdownWrapper>
@@ -80,7 +78,7 @@ const isMdContentEmpty = md.body.trim().length === 0
         </div>
         <div class="hidden lg:block">
           <aside class="sticky top-20">
-            <SectionBlock title="目录">
+            <SectionBlock title="Table of contents">
               <PostToc headings={headings} client:idle />
               <hr class="my-2 border-primary max-w-[100px]" />
               <ReadingProgress client:idle />

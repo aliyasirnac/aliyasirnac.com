@@ -23,7 +23,7 @@ export function ReadingProgress() {
 
   return (
     <div>
-      <span className="text-sm">进度 {percent}%</span>
+      <span className="text-sm">Progress {percent}%</span>
     </div>
   )
 }

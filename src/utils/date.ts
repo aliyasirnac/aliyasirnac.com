@@ -9,15 +9,15 @@ export function getRelativeTime(startDate: Date, endDate = new Date()) {
     return '刚刚'
   }
   if (diffMinutes < 60) {
-    return `${diffMinutes} 分钟前`
+    return `${diffMinutes} minutes ago`
   }
   const diffHours = Math.floor(diffMinutes / 60)
   if (diffHours < 24) {
-    return `${diffHours} 小时前`
+    return `${diffHours} hours ago`
   }
   const diffDays = Math.floor(diffHours / 24)
   if (diffDays < 10) {
-    return `${diffDays} 天前`
+    return `${diffDays} days ago`
   }
   return null
 }
@@ -27,7 +27,9 @@ export function getFormattedDate(date: Date) {
   const year = date.getFullYear() % 100
   const month = date.getMonth() + 1
   const day = date.getDate()
-  const week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][date.getDay()]
+  const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][
+    date.getDay()
+  ]
 
   return `${year} 年 ${month} 月 ${day} 日 ${week}`
 }
@@ -45,7 +47,7 @@ export function getFormattedDateTime(date: Date) {
   const hours = padZero(date.getHours())
   const minutes = padZero(date.getMinutes())
 
-  return `${year} 年 ${month} 月 ${day} 日 ${hours}:${minutes}`
+  return `${year}, ${month}, ${day}, ${hours}:${minutes}`
 }
 
 // 获取两个日期的相差的天数

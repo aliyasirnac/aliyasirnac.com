@@ -2,6 +2,7 @@
   "name": "astro-gyoza",
   "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "prepare": "pnpm exec simple-git-hooks",
     "dev": "astro dev",

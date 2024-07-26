@@ -13,7 +13,7 @@ import { Outdate } from '@/components/post/Outdate'
 import PostNav from '@/components/post/PostNav.astro'
 import { Comments } from '@/components/comment'
 import { ActionAside } from '@/components/post/ActionAside'
-import { PostCopyright } from '@/components/post/PostCopyright'
+// import { PostCopyright } from '@/components/post/PostCopyright'
 
 export const getStaticPaths = (async () => {
   const sortedPosts = await getSortedPosts()
@@ -90,7 +90,7 @@ const lastMod = current.data.lastMod || current.data.date
     </div>
     <div class="hidden lg:block">
       <aside class="sticky top-20">
-        <SectionBlock title="目录">
+        <SectionBlock title="Table of contents">
           <PostToc headings={headings} client:idle />
           <hr class="my-2 border-primary max-w-[100px]" />
           <ReadingProgress client:idle />
@@ -100,7 +100,7 @@ const lastMod = current.data.lastMod || current.data.date
     </div>
     <div>
       <section class="space-y-6">
-        <PostCopyright title={current.data.title} slug={mdSlug} lastMod={lastMod} client:visible />
+        <!-- <PostCopyright title={current.data.title} slug={mdSlug} lastMod={lastMod} client:visible /> -->
         <PostNav prev={prev} next={next} />
         {current.data.comments && <Comments />}
       </section>
