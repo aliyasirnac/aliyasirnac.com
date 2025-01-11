@@ -22,18 +22,14 @@ const fileName = await input({
 })
 
 const title = await input({
-  message: 'Please enter the project name',
+  message: 'Please enter the certificate name',
 })
 
 const description = await input({
-  message: 'Please enter the project description',
+  message: 'Please enter the certificate description',
 })
 const link = await input({
-  message: 'Please enter the project URL',
-})
-
-const image = await input({
-  message: 'Please enter the preview image URL',
+  message: 'Please enter the certificate URL',
 })
 
 const earnedSkills = await input({
@@ -47,9 +43,9 @@ const date = await input({
 const content = `title: ${title}
 description: ${description}
 link: ${link}
-image: ${image}
 earnedSkills: [${earnedSkills}]
 date: ${date}
+draft: ${false}
 `
 
 const fullPath = getProjectFullPath(fileName)
