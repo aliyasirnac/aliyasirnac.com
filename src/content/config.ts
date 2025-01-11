@@ -45,9 +45,22 @@ const friendsCollection = defineCollection({
   }),
 })
 
+const certificatesCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    link: z.string().url(),
+    earnedSkills: z.string().array(),
+    date: z.date(),
+    draft: z.boolean().default(false),
+  }),
+})
+
 export const collections = {
   posts: postsCollection,
   projects: projectsCollection,
   spec: specCollection,
   friends: friendsCollection,
+  certificates: certificatesCollection,
 }

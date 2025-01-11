@@ -126,3 +126,11 @@ export async function getHotTags(len = 5) {
     })
     .slice(0, len)
 }
+
+export async function getAllCertificates() {
+  const allCertificates = await getCollection('certificates', ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true
+  })
+
+  return allCertificates
+}

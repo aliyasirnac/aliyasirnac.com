@@ -4,7 +4,7 @@ import path from 'path'
 import { isFileNameSafe } from './utils.js'
 
 function getProjectFullPath(fileName) {
-  return path.join('./src/content/projects', `${fileName}.yaml`)
+  return path.join('./src/content/certificates', `${fileName}.yaml`)
 }
 
 const fileName = await input({
@@ -24,20 +24,32 @@ const fileName = await input({
 const title = await input({
   message: 'Please enter the project name',
 })
+
 const description = await input({
   message: 'Please enter the project description',
 })
 const link = await input({
   message: 'Please enter the project URL',
 })
+
 const image = await input({
   message: 'Please enter the preview image URL',
+})
+
+const earnedSkills = await input({
+  message: 'Please enter the  earned skills',
+})
+
+const date = await input({
+  message: 'Please enter the date',
 })
 
 const content = `title: ${title}
 description: ${description}
 link: ${link}
 image: ${image}
+earnedSkills: [${earnedSkills}]
+date: ${date}
 `
 
 const fullPath = getProjectFullPath(fileName)

@@ -1,10 +1,11 @@
 ---
-import TagList from '@/components/TagList.astro'
+import CourseList from '@/components/CourseList.astro'
 import Highlight from '@/components/Highlight.astro'
-import { getAllTags } from '@/utils/content'
+import { getAllCertificates, getAllTags } from '@/utils/content'
 import PageLayout from '@/layouts/PageLayout.astro'
 
 const allTags = await getAllTags()
+const allCerts = await getAllCertificates()
 ---
 
 <PageLayout title="Label">
@@ -13,9 +14,9 @@ const allTags = await getAllTags()
       <h1 class="text-4xl font-bold">
         <Highlight>Certificates</Highlight>
       </h1>
-      <p>There are {allTags.length} total certificates.</p>
+      <p>There are {allCerts.length} total certificates.</p>
     </header>
 
-    <TagList tags={allTags} />
+    <CourseList certificates={allCerts} />
   </div>
 </PageLayout>
