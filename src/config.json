@@ -81,6 +81,11 @@
       "icon": "icon-flask"
     },
     {
+      "name": "Certificates",
+      "link": "/certificates",
+      "icon": "icon-map"
+    },
+    {
       "name": "About",
       "link": "/about",
       "icon": "icon-ghost"

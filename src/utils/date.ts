@@ -27,11 +27,8 @@ export function getFormattedDate(date: Date) {
   const year = date.getFullYear() % 100
   const month = date.getMonth() + 1
   const day = date.getDate()
-  const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][
-    date.getDay()
-  ]
 
-  return `${year} 年 ${month} 月 ${day} 日 ${week}`
+  return `${day}/${month}/${year}`
 }
 
 // 数字前补 0
