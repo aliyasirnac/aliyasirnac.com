@@ -1,11 +1,9 @@
 import { analytics } from '@/config.json'
-import Analytics from '@vercel/analytics/astro'
 export function WebAnalytics() {
   if (import.meta.env.DEV || !analytics.enable) return null
 
   return (
     <>
-      <Analytics />
       {analytics.umami.websiteId && <UmamiAnalytics {...analytics.umami} />}
       {analytics.google.measurementId && <GoogleAnalytics {...analytics.google} />}
       {analytics.microsoftClarity.projectId && <MicrosoftClarity {...analytics.microsoftClarity} />}

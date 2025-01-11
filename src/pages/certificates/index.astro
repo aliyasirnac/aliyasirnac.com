@@ -1,10 +1,10 @@
 ---
 import CourseList from '@/components/CourseList.astro'
 import Highlight from '@/components/Highlight.astro'
-import { getAllCertificates, getAllTags } from '@/utils/content'
+import { getAllCertificates } from '@/utils/content'
 import PageLayout from '@/layouts/PageLayout.astro'
 
-const allTags = await getAllTags()
+
 const allCerts = await getAllCertificates()
 ---
 
