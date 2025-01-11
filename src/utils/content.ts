@@ -134,3 +134,8 @@ export async function getAllCertificates() {
 
   return allCertificates
 }
+
+export async function getAllJobExperience() {
+  const allJobs = await getCollection('job')
+  return allJobs
+}
