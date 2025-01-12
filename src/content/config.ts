@@ -35,16 +35,6 @@ const specCollection = defineCollection({
   }),
 })
 
-const friendsCollection = defineCollection({
-  type: 'data',
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    avatar: z.string(),
-    link: z.string().url(),
-  }),
-})
-
 const certificatesCollection = defineCollection({
   type: 'data',
   schema: z.object({
@@ -57,10 +47,21 @@ const certificatesCollection = defineCollection({
   }),
 })
 
+const jobCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    role: z.string(),
+    startDate: z.date(),
+    endDate: z.date().optional(),
+  }),
+})
+
 export const collections = {
   posts: postsCollection,
   projects: projectsCollection,
   spec: specCollection,
-  friends: friendsCollection,
   certificates: certificatesCollection,
+  job: jobCollection,
 }

@@ -76,6 +76,11 @@
       "icon": "icon-archive"
     },
     {
+      "name": "Experiences",
+      "link": "/experiences",
+      "icon": "icon-flask"
+    },
+    {
       "name": "Projects",
       "link": "/projects",
       "icon": "icon-flask"

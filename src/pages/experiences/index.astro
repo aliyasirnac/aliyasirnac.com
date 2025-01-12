@@ -1,0 +1,21 @@
+---
+import CourseList from '@/components/CourseList.astro'
+import Highlight from '@/components/Highlight.astro'
+import { getAllJobExperience } from '@/utils/content'
+import PageLayout from '@/layouts/PageLayout.astro'
+
+const allJobs = await getAllJobExperience()
+---
+
+<PageLayout title="Label">
+  <div class="max-w-[800px] mx-auto px-4 py-16">
+    <header class="space-y-4 mb-8">
+      <h1 class="text-4xl font-bold">
+        <Highlight>Job Experiences</Highlight>
+      </h1>
+      <p>There are {allJobs.length} total job experiences.</p>
+    </header>
+
+    <CourseList certificates={allJobs} />
+  </div>
+</PageLayout>

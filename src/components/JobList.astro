@@ -1,0 +1,12 @@
+---
+import type { Job } from '@/types'
+
+interface Props {
+  jobList: Job
+}
+const { jobList } = Astro.props
+---
+
+<div>
+  Job list: {JSON.stringify(jobList)}
+</div>
