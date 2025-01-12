@@ -4,6 +4,7 @@ date: 2024-11-23
 summary: RAG yöntemini kullanarak PDF'in ile sohbet et!
 category: Programming
 tags: [Python, Langchain, AI]
+draft: true
 ---
 
 ## RAG Nedir?
