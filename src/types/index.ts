@@ -1,5 +1,3 @@
-import type { z } from 'astro:content'
-
 export interface Job {
   title: string
   description: string
