@@ -2,5 +2,15 @@ title: Supervised Machine Learning Regression and Classification
 description: The Machine Learning Specialization is a foundational online program created in collaboration between DeepLearning.AI and Stanford Online. In this beginner-friendly program, you will learn the fundamentals of machine learning and how to use these techniques to build real-world AI applications.
 link: https://coursera.org/share/c0dd0fd03756d84bd0c7e3640cc07a57
 image: https://coursera.org/share/c0dd0fd03756d84bd0c7e3640cc07a57
-earnedSkills: [dsadsa, dsadsadd, fdafsad]
+earnedSkills:
+  [
+    Python,
+    Scikit-Learn,
+    Gradient Descent,
+    Machine Learning,
+    Numpy,
+    Pandas,
+    Linear Regression,
+    Logistic Regrassion,
+  ]
 date: 2024-12-11
