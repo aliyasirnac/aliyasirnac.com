@@ -3,6 +3,7 @@ import CourseList from '@/components/CourseList.astro'
 import Highlight from '@/components/Highlight.astro'
 import { getAllJobExperience } from '@/utils/content'
 import PageLayout from '@/layouts/PageLayout.astro'
+import JobList from '@/components/JobList.astro'
 
 const allJobs = await getAllJobExperience()
 ---
@@ -15,7 +16,6 @@ const allJobs = await getAllJobExperience()
       </h1>
       <p>There are {allJobs.length} total job experiences.</p>
     </header>
-
-    <CourseList certificates={allJobs} />
+    {allJobs.map((job) => <JobList job={job} />)}
   </div>
 </PageLayout>

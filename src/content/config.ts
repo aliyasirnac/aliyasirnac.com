@@ -53,6 +53,7 @@ const jobCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     role: z.string(),
+    location: z.string().optional(),
     startDate: z.date(),
     endDate: z.date().optional(),
   }),

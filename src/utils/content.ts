@@ -1,3 +1,4 @@
+import type { JobResult } from '@/types'
 import { getCollection } from 'astro:content'
 
 // 获取所有文章
@@ -135,7 +136,7 @@ export async function getAllCertificates() {
   return allCertificates
 }
 
-export async function getAllJobExperience() {
-  const allJobs = await getCollection('job')
+export async function getAllJobExperience(): Promise<JobResult[]> {
+  const allJobs = (await getCollection('job')) as unknown as Promise<JobResult[]>
   return allJobs
 }

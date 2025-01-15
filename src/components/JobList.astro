@@ -1,12 +1,12 @@
 ---
-import type { Job } from '@/types'
+import type { JobResult } from '@/types'
 
 interface Props {
-  jobList: Job
+  job: JobResult
 }
-const { jobList } = Astro.props
+const { job } = Astro.props
 ---
 
 <div>
-  Job list: {JSON.stringify(jobList)}
+  Job list: {JSON.stringify(job)}
 </div>

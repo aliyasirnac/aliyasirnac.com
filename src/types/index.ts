@@ -1,7 +1,13 @@
+export interface JobResult {
+  id: string
+  collection: string
+  data: Job
+}
 export interface Job {
   title: string
   description: string
   role: string
+  location?: string
   startDate: Date
   endDate?: Date
 }
