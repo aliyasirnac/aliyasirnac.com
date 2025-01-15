@@ -33,6 +33,10 @@ const role = await input({
   message: 'Please enter the your role',
 })
 
+const company = await input({
+  message: 'Please enter the company name',
+})
+
 const location = await input({
   message: 'Please enter the location',
 })
@@ -41,10 +45,16 @@ const startDate = await input({
   message: 'Please enter the preview startDate',
 })
 
+const earnedSkills = await input({
+  message: 'Please enter the  earned skills',
+})
+
 const content = `title: ${title}
 description: ${description}
 role: ${role}
 location: ${location}
+company: ${company}
+earnedSkills: [${earnedSkills}]
 startDate: ${startDate}
 endDate: -
 `

@@ -4,9 +4,12 @@ export interface JobResult {
   data: Job
 }
 export interface Job {
+  [x: string]: any
   title: string
   description: string
   role: string
+  company: string
+  earnedSkills: string[]
   location?: string
   startDate: Date
   endDate?: Date
