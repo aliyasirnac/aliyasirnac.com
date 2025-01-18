@@ -1,12 +1,32 @@
 ---
-import type { Job } from '@/types'
+import type { JobResult } from '@/types'
 
 interface Props {
-  jobList: Job
+  job: JobResult
 }
-const { jobList } = Astro.props
+const { job } = Astro.props
 ---
 
-<div>
-  Job list: {JSON.stringify(jobList)}
+<div class="flex p-4 flex-col rounded-md border border-gray-400 my-2">
+  <div class="py-4">
+    <h3 class="text-lg">{job.data.title}</h3>
+    <span class="text-gray-400"
+      >{job.data.company} • {job.data.location} • {job.data.startDate.toLocaleDateString()} - {
+        !job.data.endDate && 'Present'
+      }
+    </span>
+  </div>
+  <p class="text-gray-400">{job.data.description}</p>
+  <div class="flex flex-wrap gap-2.5 py-4">
+    {
+      job.data.earnedSkills.map((tag) => (
+        <div class="relative block group">
+          <div class="absolute -z-1 inset-0 rounded-lg bg-accent/10 hover:transition hover:bg-accent/20 hover:scale-105" />
+          <div class="px-2.5 py-2 text-sm flex items-baseline gap-1">
+            <span>{tag}</span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </div>
