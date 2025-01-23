@@ -31,7 +31,7 @@ const { certificates } = Astro.props
                 {certificate.data.earnedSkills.map((c) => (
                   <div class="relative group flex items-center">
                     <div class="absolute -z-1 inset-0 rounded-lg bg-accent/10 group-hover:transition group-hover:bg-accent/20 group-hover:scale-105" />
-                    <div class="px-2.5 py-2 text-sm flex items-baseline gap-1 select-none bg-white rounded-lg shadow-md">
+                    <div class="px-2.5 py-2 text-sm flex items-baseline gap-1 select-none text-black bg-white rounded-lg shadow-md">
                       <span>{c}</span>
                     </div>
                   </div>
@@ -40,7 +40,7 @@ const { certificates } = Astro.props
             </div>
           </a>
         </li>
-      ),
+      )
     )
   }
 </ul>

@@ -26,6 +26,12 @@ export function SocialList({ className }: { className?: string }) {
         staggerChildren: 0.1,
       }}
     >
+      <a
+        href="#"
+        className="p-1 dark:bg-white hover:bg-black bg-black rounded-full dark:text-black dark:hover:text-white text-white hover:text-black"
+      >
+        CV
+      </a>
       {hero.socials.map((social) => (
         <motion.li key={social.name} variants={itemVariants}>
           <a

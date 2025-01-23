@@ -30,7 +30,7 @@ title: ${title}
 date: ${new Date().toISOString()}
 tags: []
 comments: true
-draft: false
+draft: true
 ---
 `
 
