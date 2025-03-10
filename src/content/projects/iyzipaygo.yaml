@@ -1,0 +1,4 @@
+title: Iyzico için Go SDK
+description: Bu proje, Iyzico ödeme sistemini Go dili ile entegre etmek isteyen geliştiriciler için bir SDK sağlar. Ödeme alma, abonelik yönetimi ve diğer Iyzico API işlemlerini kolaylaştıran bir yapı sunar.
+link: https://github.com/Icmal-Robot-Takimi/iyzico-go
+image: https://play-lh.googleusercontent.com/jtTsOrqubY-bKPKe-mdQElyd33A8HoHO1iLVlSujT-MiUx-FIDCTfKah_oKnAs9JgA
