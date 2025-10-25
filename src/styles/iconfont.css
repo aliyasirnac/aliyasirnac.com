@@ -257,3 +257,7 @@
 .icon-sun:before {
   content: '\e89e';
 }
+
+.icon-document:before {
+  content: '\e770';
+}

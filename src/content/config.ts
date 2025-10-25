@@ -61,10 +61,20 @@ const jobCollection = defineCollection({
   }),
 })
 
+const publicationsCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    link: z.string().url(),
+  }),
+})
+
 export const collections = {
   posts: postsCollection,
   projects: projectsCollection,
   spec: specCollection,
   certificates: certificatesCollection,
   job: jobCollection,
+  publications: publicationsCollection,
 }

@@ -1,0 +1,28 @@
+---
+import type { Publication } from '@/types'
+
+interface Props {
+  publications: Publication[]
+}
+
+const { publications } = Astro.props
+---
+
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
+  {
+    publications.map((publication) => (
+      <li>
+        <a href={publication.link} target="_blank" rel="noopener noreferrer external">
+          <div class="rounded-lg bg-accent/10 overflow-hidden group flex flex-col">
+            <div class="p-4 flex flex-col">
+              <div class="group-hover:text-accent flex items-center">
+                <span class="text-xl font-bold">{publication.title}</span>
+                <i class="ml-2 iconfont icon-external-link" />
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+    ))
+  }
+</ul>

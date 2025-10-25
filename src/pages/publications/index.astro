@@ -1,0 +1,23 @@
+---
+import PublicationList from '@/components/PublicationList.astro'
+import Highlight from '@/components/Highlight.astro'
+import { getAllPublications } from '@/utils/content'
+import PageLayout from '@/layouts/PageLayout.astro'
+
+const allPublications = await getAllPublications()
+---
+
+<PageLayout title="Publications">
+  <div class="max-w-[800px] mx-auto px-4 py-16">
+    <header class="space-y-4 mb-8">
+      <h1 class="text-4xl font-bold">
+        <Highlight>Publications</Highlight>
+      </h1>
+      <p>
+        There {allPublications.length === 1 ? 'is' : 'are'}
+        {allPublications.length} total publication{allPublications.length === 1 ? '' : 's'}.
+      </p>
+    </header>
+    <PublicationList publications={allPublications} />
+  </div>
+</PageLayout>

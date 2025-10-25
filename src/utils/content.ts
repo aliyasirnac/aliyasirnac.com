@@ -1,4 +1,4 @@
-import type { JobResult } from '@/types'
+import type { JobResult, Publication, Result } from '@/types'
 import { getCollection } from 'astro:content'
 
 // 获取所有文章
@@ -139,4 +139,18 @@ export async function getAllCertificates() {
 export async function getAllJobExperience(): Promise<JobResult[]> {
   const allJobs = (await getCollection('job')) as unknown as Promise<JobResult[]>
   return allJobs
+}
+
+export async function getAllPublications() {
+  const all = await getCollection('publications')
+  // Map collection entries to their data payloads and sort by date desc if available
+  const publications = all
+    .map((entry) => entry.data as Publication)
+    .sort((a, b) => {
+      const aTime = a?.date ? new Date(a.date).valueOf() : 0
+      const bTime = b?.date ? new Date(b.date).valueOf() : 0
+      return bTime - aTime
+    })
+
+  return publications
 }

@@ -13,7 +13,8 @@
     "new-post": "node scripts/new-post.js",
     "new-project": "node scripts/new-project.js",
     "new-certificate": "node scripts/new-certificate.js",
-    "new-job": "node scripts/new-job.js"
+    "new-job": "node scripts/new-job.js",
+    "new-publication": "node scripts/new-publication.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",

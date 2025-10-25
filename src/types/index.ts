@@ -49,3 +49,15 @@ export interface Post {
   draft: boolean
   sticky: number
 }
+
+export interface Publication {
+  title: string
+  description?: string
+  link: string
+  date: Date
+}
+export interface Result<T> {
+  id: string
+  collection: string
+  data: T
+}
