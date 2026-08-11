@@ -12,16 +12,22 @@ const { publications } = Astro.props
   {
     publications.map((publication) => (
       <li>
-        <a href={publication.link} target="_blank" rel="noopener noreferrer external">
-          <div class="rounded-lg bg-accent/10 overflow-hidden group flex flex-col">
-            <div class="p-4 flex flex-col">
+        <div class="rounded-lg bg-accent/10 overflow-hidden group flex flex-col">
+          <div class="p-4 flex flex-col gap-3">
+            <a href={publication.link} target="_blank" rel="noopener noreferrer external">
               <div class="group-hover:text-accent flex items-center">
                 <span class="text-xl font-bold">{publication.title}</span>
                 <i class="ml-2 iconfont icon-external-link" />
               </div>
+            </a>
+            <p class="text-sm font-medium text-accent">{publication.authors.join('; ')}</p>
+            <p class="text-sm leading-relaxed">{publication.abstract}</p>
+            <div class="text-sm text-neutral-600 dark:text-neutral-400">
+              <p>{publication.venue}</p>
+              {publication.doi && <p>DOI: {publication.doi}</p>}
             </div>
           </div>
-        </a>
+        </div>
       </li>
     ))
   }

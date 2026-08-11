@@ -1,4 +1,20 @@
 title: Predicting Norm Control Decisions of the Turkish Constitutional Court Using Explainable AI Techniques
+authors:
+  - Cihan Erdoğanyılmaz
+  - Ali Yasir Naç
+abstract: >-
+  The application of Natural Language Processing (NLP) to Legal Judgment Prediction
+  (LJP) has gained significant momentum, yet most research in the Turkish legal domain
+  has focused on individual applications to the Constitutional Court. This paper addresses
+  a critical gap by tackling, for the first time, the prediction of norm control decisions,
+  which involve abstract constitutional review of legislation. We frame this as a binary
+  classification task to predict annulment or rejection outcomes. A novel dataset was
+  curated from publicly available court decisions and meticulously preprocessed to prevent
+  data leakage. We establish a reasonable baseline performance using a Transformer-based
+  model pre-trained on a large Turkish corpus and introduce an Explainable AI (XAI) approach
+  to interpret these predictions by analyzing the model's focus. This foundational work opens
+  a new and challenging frontier for LJP research, focusing on higher-level legal abstraction.
+venue: 2025 10th International Conference on Computer Science and Engineering (UBMK)
+doi: 10.1109/UBMK67458.2025.11206864
 link: https://ieeexplore.ieee.org/document/11206864
-date: 2025-10-25
-draft: false
+date: 2025-09-17

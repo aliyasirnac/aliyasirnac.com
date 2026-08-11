@@ -65,6 +65,10 @@ const publicationsCollection = defineCollection({
   type: 'data',
   schema: z.object({
     title: z.string(),
+    authors: z.array(z.string()),
+    abstract: z.string(),
+    venue: z.string(),
+    doi: z.string().optional(),
     date: z.date(),
     link: z.string().url(),
   }),

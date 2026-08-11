@@ -52,7 +52,10 @@ export interface Post {
 
 export interface Publication {
   title: string
-  description?: string
+  authors: string[]
+  abstract: string
+  venue: string
+  doi?: string
   link: string
   date: Date
 }

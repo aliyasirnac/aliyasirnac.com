@@ -1,0 +1,19 @@
+title: 'Measuring Statutory Citation Hallucinations of LLMs in Turkish Law: A Multi-Agent Based Novel Benchmark Dataset and Multi-Dimensional Evaluation Framework'
+authors:
+  - Cihan Erdoğanyılmaz
+  - Ali Yasir Naç
+  - Gamze Çoşkuner
+abstract: >-
+  Although large language models show potential in legal reasoning, hallucinated statutory
+  citations undermine their reliability. This study presents the first benchmark for measuring
+  citation hallucinations in Turkish law, a generator-verifier-evaluator multi-agent architecture
+  for dataset construction, and a multi-dimensional evaluation framework introducing Norm Content
+  Fabrication and Weighted Hallucination Severity metrics. Seven models were evaluated across 72
+  scenarios spanning six legal domains, yielding 504 inferences. The judge model approach was
+  validated through agreement analysis with two expert jurists. Findings reveal that statutory
+  fabrication is exceedingly rare, whereas the dominant error types are real-yet-misapplied
+  citation and inconsistent legal reasoning over correctly identified provisions.
+venue: 2026 34th Signal Processing and Communications Applications Conference (SIU), Istanbul, Turkiye, 07-10 July 2026
+doi: 10.1109/SIU71813.2026.11636663
+link: https://ieeexplore.ieee.org/document/11636663
+date: 2026-07-07
